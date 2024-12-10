@@ -1,0 +1,275 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: radial-gradient(circle at 50% 50%, #222222, #111111);
+    animation: backgroundPulse 8s infinite;
+    color: #f0f0f0;
+    overflow-x: hidden;
+  }
+  
+  header, section, footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffde59;
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+  
+  header p a {
+    color: #ffde59;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-out;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .skill {
+    padding: 1rem 1.8rem;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 126, 95, 0.6);
+  }
+  
+  .project {
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .project h3 {
+    color: #ffde59;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Animations */
+  @keyframes backgroundPulse {
+    0% {
+      background: radial-gradient(circle at 50% 50%, #222222, #111111);
+    }
+    50% {
+      background: radial-gradient(circle at 50% 50%, #333333, #111111);
+    }
+    100% {
+      background: radial-gradient(circle at 50% 50%, #222222, #111111);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes textGlow {
+    0% {
+      text-shadow: 0 0 10px #ffde59, 0 0 20px #ffde59;
+    }
+    100% {
+      text-shadow: 0 0 20px #ffde59, 0 0 40px #ffde59;
+    }
+  }
+/* Header Layout */
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align photo and text to the left */
+    gap: 20px; /* Space between photo and text */
+  }
+  
+  /* Photo Container */
+  .photo-container {
+    width: 150px; /* Increase photo size */
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffde59;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .photo-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(255, 222, 89, 0.8);
+  }
+  
+  /* Header Info */
+  .header-info h1 {
+    font-size: 2.8rem; /* Adjust font size to balance with photo */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffde59;
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+  
+  .header-info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+  
+  header p a {
+    color: #ffde59;
+    text-decoration: none;
+  }
+  .header-row {
+    animation: slideInRow 1s ease-out;
+  }
+  
+  @keyframes slideInRow {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+    
+
+  /* new one */
+
+  
+  /* General Styles for Mobile Screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* Reduce the font size for better readability */
+    padding: 0 1rem; /* Add padding to avoid edge clipping */
+  }
+
+  /* Header Layout */
+  .header-row {
+    flex-direction: column; /* Stack the photo and text vertically */
+    align-items: center; /* Center-align items for better appearance */
+    text-align: center; /* Center-align text */
+    gap: 15px; /* Reduce the gap between elements */
+  }
+
+  .photo-container {
+    width: 120px; /* Reduce the photo size for smaller screens */
+    height: 120px;
+  }
+
+  .header-info h1 {
+    font-size: 2rem; /* Scale down the font size */
+  }
+
+  .header-info p {
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  /* Section Layout */
+  section {
+    padding: 2rem 1rem; /* Reduce padding for better fit */
+    margin-top: 1rem;
+  }
+
+  .skills-container {
+    gap: 0.5rem; /* Reduce the gap between skills */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .skill {
+    padding: 0.8rem 1.2rem; /* Adjust padding for smaller elements */
+    font-size: 0.9rem; /* Reduce text size */
+  }
+
+  /* Project Cards */
+  .project {
+    padding: 1.5rem; /* Reduce padding */
+    margin: 1rem 0; /* Reduce vertical spacing */
+  }
+
+  .project h3 {
+    font-size: 1.2rem; /* Scale down the title size */
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
+
+/* Styles for Very Small Screens (e.g., phones < 480px) */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem; /* Further scale down the header title */
+  }
+
+  .photo-container {
+    width: 100px; /* Reduce photo size further */
+    height: 100px;
+  }
+
+  .skill {
+    padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+    font-size: 0.8rem; /* Further reduce font size */
+  }
+
+  .project {
+    padding: 1rem; /* Reduce padding further */
+  }
+
+  footer {
+    text-align: center; /* Center-align footer content */
+  }
+}
